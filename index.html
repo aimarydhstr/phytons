@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Phyton Snake</title>
+</head>
+<body>
+
+<div id="app">
+
+<div id="instructions">
+    <img src="image/icon.png" alt="logo" class="logo">
+    <h1>PYTHONS</h1>
+
+    <div class="card">
+        <div class="card-header">
+            Instructions
+        </div>
+        <div class="card-body">
+            <ol>
+                <li>Read the instructions</li>
+                <li>Input your name</li>
+                <li>Click play button</li>
+            </ol>
+            <p>If you wanna rewind :</p>
+            <ol>
+                <li>Click rewind button or space on keyboard</li>
+                <li>Select how many second you want to rewind by slide the range slider</li>
+                <li>Click rewind button or space on keyboard to set the rewind</li>
+                <li>Also you can click cancel to cancel the rewind</li>
+            </ol>
+        </div>
+        <div class="play">
+            <input type="text" id="name" placeholder="Your name">
+            <button class="btn" id="btn-start" disabled>Play Game</button>
+        </div>
+    </div>
+</div>
+
+<div id="playground">
+    <div class="flex">
+        <div class="score">Score<br><span id="score"></span></div>
+        <div class="title">
+            <img src="image/icon.png" alt="logo" class="icon"> <h1>PYTHONS</h1>
+        </div>
+        <div class="timer">Time<br><span id="timer"></span></div>
+    </div>
+    
+    <canvas id="canvas" tabindex="1"></canvas>
+    <div class="rewind">
+        <input type="range" id="rewindRange" min="0" max="5" step="1" value="5">
+        <div class="button">
+            <button class="btn btn-lg btn-cancel" id="btn-cancel">Cancel</button>
+            <button class="btn btn-lg btn-rewind" id="btn-rewind">Rewind</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="js/snake.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
